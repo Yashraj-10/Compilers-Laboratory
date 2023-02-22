@@ -1,0 +1,13 @@
+#define KEYWORD                 1
+#define IDENTIFIER              2
+#define INTEGER_CONSTANT        3
+#define FLOATING_CONSTANT       4
+#define ENUMERATION_CONSTANT    5
+#define CHARACTER_CONSTANT      6
+#define STRING_LITERAL          7
+#define PUNCTUATOR              8
+#define MULTI_LINE_COMMENT      9
+#define SINGLE_LINE_COMMENT     10
+#define WHITESPACE              11
+#define NEWLINE                 12
+#define ERROR                   13

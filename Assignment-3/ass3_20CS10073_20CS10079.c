@@ -54,7 +54,7 @@ int main(){
     }
     while(1);
 
-    return 1;
+    return 0;
 }
 int yywrap(void){
     return (1);

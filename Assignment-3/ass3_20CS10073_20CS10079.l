@@ -3,10 +3,13 @@
     #include "head.h"
 %}
 
+/* %x MULTI_LINE_COMMENT_BODY */
 
 DIGIT                   [0-9]
 DIGIT_SEQUENCE          {DIGIT}+
 NONZERO_DIGIT           [1-9]
+
+INTEGER                 {NONZERO_DIGIT}{DIGIT_SEQUENCE}?
 
 FRACTIONAL_CONSTANT     ({DIGIT_SEQUENCE}\.)|({DIGIT_SEQUENCE}?\.{DIGIT_SEQUENCE})       
 EXPONENT_PART           [eE]([+-]?){DIGIT_SEQUENCE}
@@ -27,37 +30,34 @@ KEYWORD                 "auto"|"break"|"case"|"char"|"const"|"continue"|"default
 SINGLE_LINE_COMMENT     {BACKSLASHES}.*
 BACKSLASHES             "//"
 
-MULTI_LINE_COMMENT      {START}{STRING1}{END}
-START                   "/*"
-END                     "*/"
-STRING1                 [^*]|{STRING2}
-STRING2                 [*][^*/]
+MULTI_LINE_COMMENT      "/*"([^*]|\*+[^*/])*\*+"/"
+
 %%
 
-{KEYWORD}                                                                       return KEYWORD;                 
+{KEYWORD}                   return KEYWORD;                 
 
-[a-zA-Z][_a-zA-Z0-9]*                                                           return IDENTIFIER;
+[a-zA-Z][_a-zA-Z0-9]*       return IDENTIFIER;
 
-[1-9][0-9]*                                                                     return INTEGER_CONSTANT;
+{INTEGER}                   return INTEGER_CONSTANT;
 
-{FLOATING_CONSTANT}                                                             return FLOATING_CONSTANT;
+{FLOATING_CONSTANT}         return FLOATING_CONSTANT;
 
-\'{C_CHAR_SEQUENCE}\'                                                           return CHARACTER_CONSTANT;
+\'{C_CHAR_SEQUENCE}\'       return CHARACTER_CONSTANT;
 
-{ENUMERATION_CONSTANT}                                                          return ENUMERATION_CONSTANT;
+{ENUMERATION_CONSTANT}      return ENUMERATION_CONSTANT;
 
-\"({S_CHAR_SEQUENCE}?)\"                                                        return STRING_LITERAL;
+\"({S_CHAR_SEQUENCE}?)\"    return STRING_LITERAL;
 
-{PUNCTUATOR}                                                                    return PUNCTUATOR;
+{PUNCTUATOR}                return PUNCTUATOR;
 
-{MULTI_LINE_COMMENT}                                                            return MULTI_LINE_COMMENT;
+{MULTI_LINE_COMMENT}        return MULTI_LINE_COMMENT;
 
-{SINGLE_LINE_COMMENT}                                                           return SINGLE_LINE_COMMENT; 
+{SINGLE_LINE_COMMENT}       return SINGLE_LINE_COMMENT; 
 
-[ \t]                                                                           return WHITESPACE;
+[ \t]                       return WHITESPACE;
 
-[\n]                                                                            return NEWLINE;
+[\n]                        return NEWLINE;
 
-.                                                                               return ERROR;
+.                           return ERROR;
 
 %%

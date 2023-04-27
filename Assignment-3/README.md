@@ -4,7 +4,7 @@ In this assignment we have to build a Lexer using flex for a subset of C languag
 
 ## How to run the code
 
-The code is written in C and uses flex for lexical analysis. The code is compiled using g compiler. The code is tested on Ubuntu 20.04 and 22.04. The code can be run using the following commands:
+The code is written in C and uses flex for lexical analysis. The code is compiled using gcc compiler. The code is tested on Ubuntu 20.04 and 22.04. The code can be run using the following commands:
 
 ```bash
 $ make

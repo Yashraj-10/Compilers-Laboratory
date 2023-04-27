@@ -1,0 +1,118 @@
+
+****************************************************************************************************
+Three Address Code:
+____________________________________________________________________________________________________
+L0:     t0 = 2.3
+L1:     d = t0
+L2:     t1 = 10
+L3:     t2 = 2
+L4:     t3 = 2
+L5:     t4 = 4
+L6:     a = t4
+
+L7: main: 
+L8:     t0 = 120
+L9:     x = t0
+L10:     t1 = 17
+L11:     y = t1
+L12:     t2 = 'c'
+L13:     ch = t2
+L14:     t3 = 'a'
+L15:     d = t3
+L16:     t4 = x + y
+L17:     sum = t4
+L18:     t6 = x - y
+L19:     diff = t6
+L20:     t8 = x * y
+L21:     prod = t8
+L22:     t10 = x / y
+L23:     div = t10
+L24:     t12 = x % y
+L25:     rem = t12
+L26:     t14 = x & y
+L27:     and = t14
+L28:     t16 = x | y
+L29:     or = t16
+L30:     t18 = 2
+L31:     t19 = y << t18
+L32:     y = t19
+L33:     t21 = 1
+L34:     t22 = x >> t21
+L35:     x = t22
+L36:     t24 = 0
+L37:     return t24
+****************************************************************************************************
+____________________________________________________________________________________________________
+Table Name: Global			 Parent Name: NULL  													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+d              float               2.3                 8              0              NULL			|
+t0             float               2.3                 8              8              NULL			|
+s              int                 -                   4              16             NULL			|
+w              arr(10,int)         -                   40             20             NULL			|
+t1             int                 10                  4              60             NULL			|
+z              arr(2,arr(2,float)) -                   32             64             NULL			|
+t2             int                 2                   4              96             NULL			|
+t3             int                 2                   4              100            NULL			|
+a              int                 4                   4              104            NULL			|
+t4             int                 4                   4              108            NULL			|
+p              ptr(int)            -                   4              112            NULL			|
+b              int                 -                   4              116            NULL			|
+quotient       void                -                   0              120            quotient			|
+c              char                -                   1              120            NULL			|
+main           void                -                   0              121            main			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: quotient			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+i              int                 -                   4              0              NULL			|
+d              float               -                   8              4              NULL			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: main			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+x              int                 120                 4              0              NULL			|
+t0             int                 120                 4              4              NULL			|
+y              int                 17                  4              8              NULL			|
+t1             int                 17                  4              12             NULL			|
+sum            int                 -                   4              16             NULL			|
+diff           int                 -                   4              20             NULL			|
+prod           int                 -                   4              24             NULL			|
+div            int                 -                   4              28             NULL			|
+rem            int                 -                   4              32             NULL			|
+and            int                 -                   4              36             NULL			|
+or             int                 -                   4              40             NULL			|
+ch             char                'c'                 1              44             NULL			|
+t2             char                'c'                 1              45             NULL			|
+d              char                'a'                 1              46             NULL			|
+t3             char                'a'                 1              47             NULL			|
+t4             int                                     4              48             NULL			|
+t5             int                                     4              52             NULL			|
+t6             int                                     4              56             NULL			|
+t7             int                                     4              60             NULL			|
+t8             int                                     4              64             NULL			|
+t9             int                                     4              68             NULL			|
+t10            int                                     4              72             NULL			|
+t11            int                                     4              76             NULL			|
+t12            int                                     4              80             NULL			|
+t13            int                                     4              84             NULL			|
+t14            int                                     4              88             NULL			|
+t15            int                                     4              92             NULL			|
+t16            int                                     4              96             NULL			|
+t17            int                                     4              100            NULL			|
+t18            int                 2                   4              104            NULL			|
+t19            int                                     4              108            NULL			|
+t20            int                                     4              112            NULL			|
+t21            int                 1                   4              116            NULL			|
+t22            int                                     4              120            NULL			|
+t23            int                                     4              124            NULL			|
+t24            int                 0                   4              128            NULL			|
+____________________________________________________________________________________________________|
+

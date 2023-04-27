@@ -1,0 +1,143 @@
+
+****************************************************************************************************
+Three Address Code:
+____________________________________________________________________________________________________
+
+L0: division: 
+L1:     t0 = a / b
+L2:     t1 = float2int(t0)
+L3:     quotient = t1
+L4:     return quotient
+
+L5: remainder: 
+L6:     param x
+L7:     param y
+L8:     t0 = call quotient, 2
+L9:     q = t0
+L10:     t1 = y * q
+L11:     t2 = x - t1
+L12:     r = t2
+L13:     return r
+
+L14: swap: 
+L15:     t0 = *a
+L16:     temp = t0
+L17:     t1 = *a
+L18:     t2 = *b
+L19:     *a = t2
+L20:     t3 = *b
+L21:     *b = temp
+L22:     return 
+
+L23: main: 
+L24:     t0 = 0
+L25:     q = t0
+L26:     t1 = 0
+L27:     r = t1
+L28:     t2 = 2.5
+L29:     x = t2
+L30:     param x
+L31:     t3 = 1.2
+L32:     param t3
+L33:     t4 = call division, 2
+L34:     q = t4
+L35:     t6 = 10
+L36:     r = t6
+L37:     t8 = &q
+L38:     param t8
+L39:     t9 = &r
+L40:     param t9
+L41:     t10 = call swap, 2
+L42:     t11 = 12
+L43:     param t11
+L44:     t12 = 5
+L45:     param t12
+L46:     t13 = call remainder, 2
+L47:     r = t13
+L48:     t15 = 0
+L49:     return t15
+****************************************************************************************************
+____________________________________________________________________________________________________
+Table Name: Global			 Parent Name: NULL  													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+division       int                 -                   4              0              division			|
+remainder      int                 -                   4              4              remainder			|
+swap           void                -                   0              8              swap			|
+main           int                 -                   4              8              main			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: division			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+a              float               -                   8              0              NULL			|
+b              float               -                   8              8              NULL			|
+return         int                 -                   4              16             NULL			|
+quotient       int                 -                   4              20             NULL			|
+t0             float                                   8              24             NULL			|
+t1             int                                     4              32             NULL			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: remainder			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+x              int                 -                   4              0              NULL			|
+y              int                 -                   4              4              NULL			|
+return         int                 -                   4              8              NULL			|
+q              int                 -                   4              12             NULL			|
+quotient       int                 -                   4              16             NULL			|
+t0             int                                     4              20             NULL			|
+r              int                 -                   4              24             NULL			|
+t1             int                                     4              28             NULL			|
+t2             int                                     4              32             NULL			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: swap			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+a              ptr(int)            -                   4              0              NULL			|
+b              ptr(int)            -                   4              4              NULL			|
+temp           int                 -                   4              8              NULL			|
+t0             int                                     4              12             NULL			|
+t1             int                                     4              16             NULL			|
+t2             int                                     4              20             NULL			|
+t3             int                                     4              24             NULL			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: main			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+return         int                 -                   4              0              NULL			|
+q              int                 0                   4              4              NULL			|
+t0             int                 0                   4              8              NULL			|
+r              int                 0                   4              12             NULL			|
+t1             int                 0                   4              16             NULL			|
+x              float               2.5                 8              20             NULL			|
+t2             float               2.5                 8              28             NULL			|
+division       int                 -                   4              36             NULL			|
+t3             float               1.2                 8              40             NULL			|
+t4             int                                     4              48             NULL			|
+t5             int                                     4              52             NULL			|
+t6             int                 10                  4              56             NULL			|
+t7             int                                     4              60             NULL			|
+swap           int                 -                   4              64             NULL			|
+t8             ptr(int)                                4              68             NULL			|
+t9             ptr(int)                                4              72             NULL			|
+t10            int                                     4              76             NULL			|
+remainder      int                 -                   4              80             NULL			|
+t11            int                 12                  4              84             NULL			|
+t12            int                 5                   4              88             NULL			|
+t13            int                                     4              92             NULL			|
+t14            int                                     4              96             NULL			|
+t15            int                 0                   4              100            NULL			|
+____________________________________________________________________________________________________|
+

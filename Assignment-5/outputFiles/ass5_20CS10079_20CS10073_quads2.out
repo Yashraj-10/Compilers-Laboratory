@@ -1,0 +1,158 @@
+
+****************************************************************************************************
+Three Address Code:
+____________________________________________________________________________________________________
+
+L0: randm_func: 
+L1:     ans = d
+L2:     if x > y goto 5
+L3:     goto 7
+L4:     goto 8
+L5:     ans = x
+L6:     goto 8
+L7:     ans = y
+L8:     return ans
+
+L9: min: 
+L10:     if x > y goto 13
+L11:     goto 14
+L12:     goto 18
+L13:     goto 16
+L14:     t0 = x
+L15:     goto 18
+L16:     t0 = y
+L17:     goto 18
+L18:     min_val = t0
+L19:     return min_val
+
+L20: randm_nested: 
+L21:     t0 = 1
+L22:     ans = t0
+L23:     t1 = 3
+L24:     if x < t1 goto 27
+L25:     goto 34
+L26:     goto 34
+L27:     param x
+L28:     param y
+L29:     t2 = 5
+L30:     param t2
+L31:     t3 = call randm_func, 3
+L32:     ans = t3
+L33:     goto 34
+L34:     return ans
+
+L35: main: 
+L36:     t0 = 5
+L37:     b = t0
+L38:     t1 = 10
+L39:     param t1
+L40:     param b
+L41:     t2 = call randm_nested, 2
+L42:     diff = t2
+L43:     t4 = 2
+L44:     x = t4
+L45:     t6 = 3
+L46:     y = t6
+L47:     param x
+L48:     t8 = 3
+L49:     param t8
+L50:     t9 = call min, 2
+L51:     param t9
+L52:     t10 = 5
+L53:     param t10
+L54:     param y
+L55:     t11 = call min, 2
+L56:     param t11
+L57:     t12 = 2
+L58:     param t12
+L59:     t13 = call randm_func, 3
+L60:     b = t13
+L61:     t15 = 0
+L62:     return t15
+****************************************************************************************************
+____________________________________________________________________________________________________
+Table Name: Global			 Parent Name: NULL  													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+randm_func     int                 -                   4              0              randm_func			|
+min            int                 -                   4              4              min			|
+randm_nested   int                 -                   4              8              randm_nested			|
+main           int                 -                   4              12             main			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: randm_func			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+x              int                 -                   4              0              NULL			|
+y              int                 -                   4              4              NULL			|
+d              int                 -                   4              8              NULL			|
+return         int                 -                   4              12             NULL			|
+ans            int                 -                   4              16             NULL			|
+t0             int                                     4              20             NULL			|
+t1             int                                     4              24             NULL			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: min			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+x              int                 -                   4              0              NULL			|
+y              int                 -                   4              4              NULL			|
+return         int                 -                   4              8              NULL			|
+min_val        int                 -                   4              12             NULL			|
+t0             int                                     4              16             NULL			|
+t1             int                                     4              20             NULL			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: randm_nested			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+x              int                 -                   4              0              NULL			|
+y              int                 -                   4              4              NULL			|
+return         int                 -                   4              8              NULL			|
+ans            int                 1                   4              12             NULL			|
+t0             int                 1                   4              16             NULL			|
+t1             int                 3                   4              20             NULL			|
+randm_func     int                 -                   4              24             NULL			|
+t2             int                 5                   4              28             NULL			|
+t3             int                                     4              32             NULL			|
+t4             int                                     4              36             NULL			|
+____________________________________________________________________________________________________|
+
+____________________________________________________________________________________________________
+Table Name: main			 Parent Name: Global													|
+____________________________________________________________________________________________________|
+Name           Type                Initial Value       Size           Offset         Nested         |
+                                                                                                    |
+return         int                 -                   4              0              NULL			|
+diff           int                 -                   4              4              NULL			|
+x              int                 -                   4              8              NULL			|
+y              int                 -                   4              12             NULL			|
+b              int                 5                   4              16             NULL			|
+t0             int                 5                   4              20             NULL			|
+randm_nested   int                 -                   4              24             NULL			|
+t1             int                 10                  4              28             NULL			|
+t2             int                                     4              32             NULL			|
+t3             int                                     4              36             NULL			|
+t4             int                 2                   4              40             NULL			|
+t5             int                                     4              44             NULL			|
+t6             int                 3                   4              48             NULL			|
+t7             int                                     4              52             NULL			|
+randm_func     int                 -                   4              56             NULL			|
+min            int                 -                   4              60             NULL			|
+t8             int                 3                   4              64             NULL			|
+t9             int                                     4              68             NULL			|
+t10            int                 5                   4              72             NULL			|
+t11            int                                     4              76             NULL			|
+t12            int                 2                   4              80             NULL			|
+t13            int                                     4              84             NULL			|
+t14            int                                     4              88             NULL			|
+t15            int                 0                   4              92             NULL			|
+____________________________________________________________________________________________________|
+

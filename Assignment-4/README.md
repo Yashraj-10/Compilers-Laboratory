@@ -8,7 +8,7 @@ The output has parse tree edges in the form of a list of tuples. Each tuple cont
 
 ## How to run the code
 
-The code is written in C and uses yacc/bison for parsing. The code is compiled using g compiler. The code is tested on Ubuntu 20.04 and 22.04. The code can be run using the following commands:
+The code is written in C and uses yacc/bison for parsing. The code is compiled using gcc compiler. The code is tested on Ubuntu 20.04 and 22.04. The code can be run using the following commands:
 
 ```bash
 $ make

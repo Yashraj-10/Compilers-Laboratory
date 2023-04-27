@@ -4,3 +4,8 @@ Assignment-2/libass2_20CS10079.a
 Assignment-3/output.txt
 Assignment-3/lex.yy.c
 Assignment-3/*.out
+Assignment-4/parser
+Assignment-4/lex.yy.c
+Assignment-4/y.tab.*
+Assignment-4/*.o
+Assignemnt-4/asgn4_20CS10079_20CS10073_output.txt

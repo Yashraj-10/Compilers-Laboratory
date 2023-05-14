@@ -1,4 +1,4 @@
-# Assignment 3: Parser for tinyC
+# Assignment 5: Machine Independent Code Generator for tinyC
 
 In this assignment we have to write semantic actions on the Parser built in the previous [assingnment](../Assignment-4/).
 The semantic actions have to be embedded in the yacc file created in the previous assignment.

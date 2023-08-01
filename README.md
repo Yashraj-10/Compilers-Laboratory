@@ -26,3 +26,4 @@ The steps for running each individual assignment are in the respective folders.
 ### [Assignment 6: Optimizations for tinyC](/Assignment-6/)
 
 ## Disclaimer
+This repository is a written on a PC with ```Ubuntu 22.04``` as the OS and an ```x86_64``` architecture. It may happen that the code doesn't work on other systems.
